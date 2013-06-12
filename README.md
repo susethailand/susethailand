@@ -1,2 +1,2 @@
-susethailand
+www.susethailand.com/suseforum
 ============
