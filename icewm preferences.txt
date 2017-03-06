@@ -1,0 +1,55 @@
+icewm preferences                          
+
+# This is an example for IceWM's toolbar definition file.
+#
+# Place your variants in @CFGDIR@ or in $HOME/.icewm
+# since modifications to this file will be discarded when you
+# (re)install icewm.
+#
+#prog xterm xterm xterm
+#prog "Web browser" web-browser xdg-open about:blank
+prog "Firefox Web browser" firefox xdg-open https://www.gmail.com
+prog "Nautilus File Manager" "/usr/share/icons/gnome/32x32/apps/system-file-manager.png" nautilus
+prog "Libreoffice Calc" "/usr/share/icons/gnome/32x32/apps/libreoffice-calc.png" libreoffice --calc
+prog "Libreoffice Writer" "/usr/share/icons/gnome/32x32/apps/libreoffice-writer.png" libreoffice --writer
+prog "Accpac" "/usr/share/pixmaps/tsclient.svg" tsclient
+
+
+
+GNOME 3 Shell personal preferences 
+
+# Settings for Gnome
+gsettings set org.gnome.desktop.background show-desktop-icons true
+gsettings set org.gnome.desktop.interface clock-show-date true
+gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'grayscale'
+gsettings set org.gnome.settings-daemon.plugins.xsettings hinting 'slight'
+gsettings set org.gnome.desktop.interface text-scaling-factor '1.0'
+gsettings set org.gnome.desktop.interface monospace-font-name "Monospace 10"
+gsettings set org.gnome.desktop.interface document-font-name 'Sans 10'
+gsettings set org.gnome.desktop.interface font-name 'Cantarell 10'
+gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Cantarell Bold 10'
+gsettings set org.gnome.shell.overrides button-layout '":minimize,maximize,close"'
+
+# Gnome proxy
+gsettings set org.gnome.system.proxy mode 'auto'
+gsettings set org.gnome.system.proxy autoconfig-url "http://server/default.pac"
+
+# Sane settings for screen lock (screen off: 10 minutes, screen lock: 15 minutes)
+gsettings set org.gnome.settings-daemon.plugins.power sleep-display-ac 600
+gsettings set org.gnome.settings-daemon.plugins.power sleep-display-battery 600
+gsettings set org.gnome.desktop.session idle-delay 600
+gsettings set org.gnome.desktop.screensaver idle-activation-enabled 'true'
+gsettings set org.gnome.desktop.screensaver lock-enabled 'true'
+gsettings set org.gnome.desktop.screensaver lock-delay 900
+
+# Sane settings for Nautilus
+gsettings set org.gnome.nautilus.desktop font 'Cantarell 10'
+gsettings set org.gnome.nautilus.list-view default-visible-columns "['name', 'size', 'type', 'date_modified', 'owner', 'group', 'permissions']"
+gsettings set org.gnome.nautilus.list-view default-zoom-level 'smallest'
+gsettings set org.gnome.nautilus.preferences enable-delete true
+gsettings set org.gnome.nautilus.preferences show-hidden-files true
+gsettings set org.gnome.nautilus.preferences sort-directories-first true
+gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view'
+
+# Sane settings for gedit"
+gsettings set org.gnome.gedit.preferences.editor display-line-numbers true
