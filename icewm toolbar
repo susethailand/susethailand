@@ -1,0 +1,19 @@
+- Edit file
+vi /etc/icewm/toolbar
+
+# This is an example for IceWM's toolbar definition file.
+#
+# Place your variants in @CFGDIR@ or in $HOME/.icewm
+# since modifications to this file will be discarded when you
+# (re)install icewm.
+#
+#prog xterm xterm xterm
+#prog "Web browser" web-browser xdg-open about:blank
+prog "Firefox Web browser" firefox xdg-open https://www.gmail.com
+prog "Nautilus File Manager" "/usr/share/icons/gnome/32x32/apps/system-file-manager.png" nautilus
+prog "Libreoffice Calc" "/usr/share/icons/gnome/32x32/apps/libreoffice-calc.png" libreoffice --calc
+prog "Libreoffice Writer" "/usr/share/icons/gnome/32x32/apps/libreoffice-writer.png" libreoffice --writer
+prog "Accpac" "/usr/share/pixmaps/tsclient.svg" tsclient
+prog "Dictionary" "/usr/share/icons/gnome/32x32/apps/accessories-dictionary.png" /opt/lexitron/lexitron.sh
+prog "Fix Firefox" "/usr/share/icons/gnome/32x32/apps/fix-firefox.png" /opt/fix-firefox/fix-firefox.sh
+prog "Take Screenshot" "/usr/share/icons/gnome/32x32/devices/camera-photo.png" gnome-screenshot --interactive
