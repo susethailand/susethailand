@@ -1,0 +1,34 @@
+#!/bin/sh
+
+#sleep 2
+# Set keyboard layout at ICEWM startup session
+# Done! Use Alt-Shift to change keyboard layout
+setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:­scroll us,th
+
+# Nautilus File Manager
+nautilus -c &
+
+# GNOME 3 Shell personal preferences settings for IceWM window manager
+# Show icons on Desktop
+gsettings set org.gnome.desktop.background show-desktop-icons true
+
+#
+# Nautilus
+#
+# Use list view by default
+gsettings set org.gnome.nautilus.preferences default-folder-viewer "list-view"
+
+# Sort files by type
+gsettings set org.gnome.nautilus.preferences default-sort-order "type"
+
+# List directories first
+gsettings set org.gnome.nautilus.preferences sort-directories-first true
+
+# Never show image thumbnails
+gsettings set org.gnome.nautilus.preferences show-image-thumbnails "never"
+
+# Use tree-view
+gsettings set org.gnome.nautilus.list-view use-tree-view true
+
+# Small zoom level
+gsettings set org.gnome.nautilus.list-view default-zoom-level "small"
